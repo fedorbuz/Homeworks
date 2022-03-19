@@ -23,6 +23,9 @@ ODD = "odd"
 EVEN = "even"
 PRIME = "prime"
 
+def is_prime(num):
+    return len([i for i in range(1, num + 1) if num % i == 0]) == 2
+
 
 def filter_numbers(num_list, arg):
     """
@@ -36,6 +39,8 @@ def filter_numbers(num_list, arg):
     <<< [2, 4]
     """
     if arg == ODD:
-        return [n for n in num_list if n %% 2 == 1]
+        return [n for n in num_list if n % 2 == 1]
     if arg == EVEN:
-        return [n for n in num_list if n %% 2 == 1]
+        return [n for n in num_list if n % 2 == 1]
+    if arg == PRIME:
+        return [n for n in num_list if is_prime(n)]
