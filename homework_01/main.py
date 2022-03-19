@@ -4,7 +4,7 @@
 """
 
 
-def power_numbers(n):
+def power_numbers(N):
     """
     функция, которая принимает N целых чисел,
     и возвращает список квадратов этих чисел
@@ -12,7 +12,7 @@ def power_numbers(n):
     <<< [1, 4, 25, 49]
     """
     num_list = []
-    for i in range(n):
+    for i in range(N):
         num_list.append(int(input()) ** 2)
     print(num_list)
 
@@ -24,7 +24,7 @@ EVEN = "even"
 PRIME = "prime"
 
 
-def filter_numbers():
+def filter_numbers(num_list, arg):
     """
     функция, которая на вход принимает список из целых чисел,
     и возвращает только чётные/нечётные/простые числа
@@ -35,3 +35,7 @@ def filter_numbers():
     >>> filter_numbers([2, 3, 4, 5], EVEN)
     <<< [2, 4]
     """
+    if arg == ODD:
+        return [n for n in num_list if n %% 2 == 1]
+    if arg == EVEN:
+        return [n for n in num_list if n %% 2 == 1]
