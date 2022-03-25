@@ -4,17 +4,17 @@
 """
 
 
-def power_numbers(N):
+def power_numbers(*N):
     """
     функция, которая принимает N целых чисел,
     и возвращает список квадратов этих чисел
     >>> power_numbers(1, 2, 5, 7)
     <<< [1, 4, 25, 49]
     """
-    num_list = []
-    for i in range(N):
-        num_list.append(int(input()) ** 2)
-    print(num_list)
+    sqr = []
+    for i in N:
+        sqr.append(int(i) ** 2)
+    return(sqr)
 
 
 
