@@ -1,4 +1,4 @@
-pytest testing/test_homework_02 -s -vvfrom itertools import repeat
+from itertools import repeat
 import pytest
 from faker import Faker
 
