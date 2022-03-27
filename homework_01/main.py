@@ -41,6 +41,8 @@ def filter_numbers(num_list, arg):
     if arg == ODD:
         return [n for n in num_list if n % 2 == 1]
     if arg == EVEN:
-        return [n for n in num_list if n % 2 == 1]
+        return [n for n in num_list if n % 2 == 0]
     if arg == PRIME:
         return [n for n in num_list if is_prime(n)]
+
+#print(filter_numbers([2, 3, 4, 5], EVEN))
