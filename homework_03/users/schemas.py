@@ -1,5 +1,6 @@
-from pydantic import BaseModel, constr
+from pydantic import BaseModel, constr, Field
 
+from uuid import uuid4
 
 class UserBase(BaseModel):
     username: constr(min_length=8)
@@ -10,9 +11,14 @@ class UserIn(UserBase):
 
 
 class UserOut(UserBase):
-    id: int
+    id: int = Field(..., example = 123)
+
+
+def generate_token():
+    token = str(uuid4())
+    print("new token", token)
+    return token
 
 
 class User(UserOut):
-    pass
-    # token: str
+    token: str = Field(default_factory=generate_token)
