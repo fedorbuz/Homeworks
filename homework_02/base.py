@@ -5,7 +5,7 @@ from homework_02.exceptions import LowFuelError, NotEnoughFuel
 class Vehicle(ABC):
 
     weight: int = 1000
-    started: bool = True
+    started: bool = False
     fuel: int = 75
     fuel_consumption: int = 14  # расход в л/100 км
 
