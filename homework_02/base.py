@@ -25,7 +25,7 @@ class Vehicle(ABC):
             print('Дивгатель уже заведен')
 
     def move(self, distance):
-        fuel_req = self.fuel_consumption * distance / 100
+        fuel_req = self.fuel_consumption * distance
         if self.fuel >= fuel_req:
             self.fuel -= fuel_req
         else:
